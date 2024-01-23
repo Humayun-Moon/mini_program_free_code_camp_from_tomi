@@ -66,13 +66,15 @@ def binary_search(array, target):
             high = mid -1
     return -1
 my_number = [10,20,40,30,70,80,50,100,90,60] 
-sort_list = sort_list(my_number)
-target_value = 80
 
-result = binary_search (my_number, target_value) 
+sort_list = sort_list(my_number)
 for number in my_number:
     print(number, end="  ")
-print()    
+print() 
+target_value = int(input("Enter your targeted number: "))
+
+result = binary_search (my_number, target_value) 
+   
 if result != -1:
     print(f"Target {target_value} found at index {result}")
 else:
